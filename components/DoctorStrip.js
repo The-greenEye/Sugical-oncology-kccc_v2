@@ -1,5 +1,6 @@
 function DoctorStrip() {
     return (
+        <div>
         <section className="bg-white p-4 md:p-8 fade-in" style={{animationDelay: '0.1s'}} data-name="doctor-strip" data-file="components/DoctorStrip.js">
             <div className="flex items-center gap-6 md:gap-8 max-w-4xl mx-auto">
                 <div className="w-20 h-20 md:w-28 md:h-28 bg-[var(--secondary-yellow)] rounded-xl md:rounded-2xl flex items-center justify-center shrink-0 shadow-sm transition-transform hover:scale-105">
@@ -11,5 +12,7 @@ function DoctorStrip() {
                 </div>
             </div>
         </section>
+                     <marquee direction="rtl" scrollamount="smooth" bgcolor="transparent"> للجراحات التخصصية هو مركز رائد في منطقة الشرق الأوسط يقدم خدمات متكاملة لمرضى السرطان، ويتميز بوجود نخبة من الاستشاريين المتخصصين وأحدث التجهيزات الطبية. يسعى المركز دائماً لاستضافة المؤتمرات وورش العمل العالمية لرفع مستوى الخدمات الصحية في دولة الكويت. </marquee>
+        </div>
     );
 }
