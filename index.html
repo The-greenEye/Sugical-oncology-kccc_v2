@@ -69,6 +69,63 @@
             animation: fadeIn 0.8s ease-out forwards;
         }
     }
+        /* CONTAINER STYLES (BACKGROUND AND DIRECTION) */
+.news-scroller-container {
+    /* Background color gray (bg gray) */
+    background-color: #f0f0f0; 
+    overflow: hidden; /* Hides content outside the container */
+    padding: 10px 0;
+    white-space: nowrap; /* Ensures all content stays on one line */
+    border-bottom: 2px solid #ccc;
+    font-family: 'Droid Arabic Naskh', Arial, sans-serif; /* Recommended font for Arabic */
+    direction: rtl; 
+}
+
+/* CONTENT STYLES (THE SCROLLING PART) */
+.news-scroller-content {
+    display: inline-block;
+    /* Apply the animation */
+    animation: scroll-rtl 25s linear infinite; 
+}
+
+/* Pause the scrolling when the user hovers over the banner */
+.news-scroller-container:hover .news-scroller-content {
+    animation-play-state: paused;
+}
+
+/* INDIVIDUAL NEWS ITEM STYLES */
+.news-item {
+    padding: 0 40px; /* Space between each item */
+    display: inline-block;
+}
+
+/* STYLING FOR RED TITLE AND BLACK INFO */
+.news-item .icon {
+    margin-right: 5px; /* Adjust margin for RTL flow */
+}
+.news-item .title {
+    /* Title in red color */
+    color: #cc0000; 
+    font-weight: bold;
+    margin-right: 10px; /* Adjust margin for RTL flow */
+}
+.news-item .info {
+    /* Info in black color */
+    color: #333; 
+}
+
+/* THE CSS ANIMATION (KEYFRAMES) */
+/* This defines the movement for Right-To-Left (RTL) scrolling */
+@keyframes scroll-rtl {
+    0% {
+        /* Start position: 0% movement */
+        transform: translateX(0); 
+    }
+    100% {
+        /* End position: Move the entire width of the content */
+        transform: translateX(100%); 
+    }
+}
     </style>
 </head>
 <body>
